@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  form(
+    method="post"
+    action=action
+  )
+    label
+      strong utilisateur
+      input(name="userId" value=todo.userId)
+
+    label
+      strong tache
+      input(name="task" value=todo.task)
+
+    label
+      strong description
+      input(name="description" value=todo.description)
+
+    label
+      input(type="submit" value="Envoyer")

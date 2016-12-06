@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1= title
+  p Voici la liste des tâches :
+    table(border=1)
+      tr
+        th Id
+        th Id utilisateur
+        th Tâche
+        th Description
+        th Done ?
+
+      each todo in todos   
+        tr
+          td #{todo.rowid}
+          td #{todo.userId}
+          td #{todo.task}
+          td #{todo.description}
+          td 
+            a(href='/todos/' + todo.rowid + '?_method=delete') Supprimer la tâche
+
+  p 
+    a(href='/todos/add') Ajouter une tâche

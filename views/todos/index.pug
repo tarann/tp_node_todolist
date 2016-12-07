@@ -6,7 +6,6 @@ block content
     table(border=1)
       tr
         th Id
-        th Id utilisateur
         th Tâche
         th Description
         th Done ?
@@ -14,7 +13,6 @@ block content
       each todo in todos   
         tr
           td #{todo.rowid}
-          td #{todo.userId}
           td #{todo.task}
           td #{todo.description}
           td 
